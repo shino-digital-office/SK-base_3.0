@@ -131,21 +131,30 @@
   position: fixed;
   right: 10px;
   bottom: 40px;
-  z-index: $z-footer-fixed + 1; // 固定フッターより上に表示。デザインによって変更可。
+  z-index: $z-footer-fixed + 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 52px;
   height: 52px;
+  text-decoration: none;
+  cursor: pointer;
+
   img {
     width: 100%;
   }
-  opacity: 1;
+
+  opacity: 0;
   visibility: hidden;
   transition:
     opacity 0.3s,
     visibility 0.3s;
+
   &.is-show {
     opacity: 1;
     visibility: visible;
   }
+
   @include mq(md) {
     right: 20px;
     bottom: 100px;

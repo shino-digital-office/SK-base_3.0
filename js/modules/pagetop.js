@@ -17,11 +17,8 @@ if (pagetop) {
   // ----------------------------
   // クリックでトップに戻る
   // ----------------------------
-  const pagetopLink = pagetop.querySelector("a");
-  if (pagetopLink) {
-    pagetopLink.addEventListener("click", (e) => {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
+  pagetop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
